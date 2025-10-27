@@ -1,256 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Netra Khot</title>
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Ctext x='0' y='12' font-size='12' fill='%23ff0000'%3E👩🏽‍💻%3C/text%3E%3C/svg%3E">
-  <link rel="stylesheet" href="styles.css">
-  <!-- Bootstrap CSS link -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>netrakhot.com</title>
+
+<!-- Import Quicksand font with extra-bold weight -->
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap" rel="stylesheet">
+
+<style>
+body {
+  display: flex;
+  justify-content: center;   /* center horizontally */
+  align-items: center;       /* center vertically */
+  height: 100vh;             /* full viewport height */
+  margin: 0;
+  font-family: 'Quicksand', sans-serif;
+  background-color: #f8f8f8;
+}
+
+h1 {
+  font-size: 4rem;        /* large text */
+  font-weight: 700;       /* very bold */
+  color: #222;            /* strong dark gray */
+  letter-spacing: 0.03em; /* slight spacing for balance */
+}
+</style>
 </head>
+
 <body>
-  
-  <div class="container mt-4">
-    <header class="text-center">
-      <!-- <img src="images/tanvipfp.png" alt="Your Profile Picture" class="img-fluid rounded-circle" style="max-width:100%; width: 450px;"> -->
-      
-      <h1 class="mt-3">I'm Netra, an <span style="color: #be4006; text-align: center;">incoming high schooler</span> with interest in <span style="color: #0653be; text-align: center;">Science</span>, <span style="color: #027002; text-align: center;">Math</span>, <span style="color: #a58400; text-align: center;">Arts</span>, and <span style="color: #722e9d; text-align: center;">Sports</span>, especially <span style="color: #37b800; text-align: center;">Tennis</span>.</h1>
-    </header>
-    <div class="container">
-      
-  
-      <section id="contact" class="text-center">
-  
-        <button type="button" class="btn btn-info mr-1 mb-2" id="emailButton" onclick='openLink("✉️", "https://mail.google.com/mail/?view=cm&fs=1&to=" + encodeURIComponent("netraqua@gmail.com"), "emailButton")'>
-          ✉️ email me!
-          <span class="badge badge-light"></span>
-        </button>
-  
-        <!-- <button type="button" class="btn btn-info mr-1 mb-2" id="linkedInButton" onclick="openLink('<img src=\'images/linkedin.png\' alt=\'LinkedIn Icon\' width=\'20\' height=\'20\'>', 'linkedin.com/in/tanvi-khot', 'linkedInButton')">
-          <img src="images/linkedin.png" alt="LinkedIn Icon" width="20" height="20">
-          <span class="badge badge-light"></span>
-        </button> -->
-  
-        <!-- <button type="button" class="btn btn-primary mr-1 mb-2" id="githubButton" onclick="openLink('<img src=\'images/github.png\' alt=\'GitHub Icon\' width=\'20\' height=\'20\'>', 'github.com/tanvikhot', 'githubButton')">
-          <img src="images/github.png" alt="GitHub Icon" width="20" height="20">
-          <span class="badge badge-light"></span>
-        </button> -->
-        
-
-        <!-- <button type="button" class="btn btn-primary mr-1 mb-2" id="downloadResumeButton" onclick="downloadResume()">
-          <img src="images/resume.png" alt="Resume Icon" width="20" height="20">
-          <span class="badge badge-light"></span>
-      </button> -->
-      </section>
-    </div>
-    
-    <section id="about">
-        <p></p><p></p><p></p><p></p>
-      <h2>About me!</h2>
-      <p>I am an eigth grader highly motivated and interested in the environment and how technology can help improve it. I've participated and won several science fairs to further this work, having made projects to help recycling, animals, and ocean pollution. I also love to play tennis and have been playing for 3 years. I have worked with several programming languages and libraries, like PyTorch, Python, Pandas, and more.</p>
-    </section>
-    <p></p><p></p>
-
-    <section id="experience">
-        <h2>Awards</h2>
-        <div class="card">
-            <div class="card-body">
-              <h3 class="card-title">Science Fairs  - <span style="color: #003874;">Synopsis, S4, CSEF</span></h3>
-              <h6><span style="color: #676767;">August 2022 - Present</span></h6>
-              <div class="card">
-                <div class="card-body">
-                  <h3 class="card-title"><span style="color: #003874;">Synopsys Science Fair Winner - 7th grade</span></h3>
-                  <p class="card-text">Created AI robot to recognize and collect aluminum cans to prevent beach pollution, and won 2nd place.
-                    
-                    </p>
-              </div> 
-              </div>  
-              <p></p><p></p><p></p>
-              <div class="card">
-                <div class="card-body">
-                  <h3 class="card-title"><span style="color: #0c529e;">Synopsys Science Fair Winner - 8th grade</span></h3>
-                  <p class="card-text">Created neural network program to aid in the detection of coral bleaching to save aquatic life.
-                    </p>
-              </div> 
-              </div> 
-              <p></p><p></p><p></p>
-
-              <div class="card">
-                <div class="card-body">
-                  <h3 class="card-title"><span style="color: #001eff;">Honorable Mention in CSEF - statewide fair </span></h3>
-                  <p class="card-text">Participated in the statewide fair after Synopsys in 7th grade and won an honoable mention for the AI robot to recognize and collect aluminum cans.
-                    </p>
-              </div> 
-              </div> 
-              <p></p><p></p><p></p>
-
-              <div class="card">
-                <div class="card-body">
-                  <h3 class="card-title"><span style="color: #5b079c;">S4 third place winner</span></h3>
-                  <p class="card-text">Created functioning automatic dog feeder for service dog owners with Alzheimers.
-                    </p>
-              </div> 
-              </div> 
-              <p></p><p></p><p></p>
-
-              <div class="card">
-                <div class="card-body">
-                  <h3 class="card-title"><span style="color: #810472;">S4 first place winner</span></h3>
-                  <p class="card-text">Created smart recycling bin to sort between different types of bottles to aid in cross contamination
-                    </p>
-              </div> 
-              </div> 
-            </div>
-          </div>
-          <p></p><p></p>
-
-          <div class="card">
-            <div class="card-body">
-              <h3 class="card-title"><span style="color: #cca700;">Student spotlight award</span></h3>
-              <h6><span style="color: #676767;">October 2023</span></h6>
-              <p class="card-text"> Chosen by teacher for academic excellence.
-
-                
-              </p>
-            </div>
-          </div> 
-          <p></p><p></p>
-
-      </section>
-        <p></p><p></p><p></p>
-    <section id="experience">
-      <h2>Experiences</h2>
-      <p></p><p></p><p></p>
-         
-
-          <div class="card">
-            <div class="card-body">
-              <h3 class="card-title"><span style="color: #4b9c00;">Tennis</span></h3>
-              <h6><span style="color: #676767;">August 2021 - present</span></h6>
-              <p class="card-text">UTR 3.35, Tennis WTN 24.5 - Played and won USTA tournaments.            </p>
-              <div class="card">
-                <div class="card-body">
-                  <h3 class="card-title"><span style="color: #45024d;">Captain of Lawson Junior Varsity tennis team</span></h3>
-                  <p class="card-text">Played singles #1, Won championship - first in division.
-                    </p>
-              </div> 
-              </div> 
-            </div>
-          </div>
-          <p></p><p></p>
-          <div class="card">
-            <div class="card-body">
-              <h3 class="card-title">Violin player - <span style="color: #0a035c;">School Orchestra</span></h3>
-              <h6><span style="color: #676767;">August 2021 - present</span></h6>
-              <p class="card-text"> Participated in the school orchestra for 3 years, got promoted early to the Advanced level a year early, 2nd chair.
-              </p>
-            </div>
-          </div>
-          <p></p><p></p>
-          <div class="card">
-            <div class="card-body">
-              <h3 class="card-title"><span style="color: #0d420f;">Girl Scouts</span></h3>
-              <h6><span style="color: #676767;">August 2018 - present</span></h6>
-              <p class="card-text"> Currently a Cadette working on a Silver Award Project with guidance from the Cupertino Mayor. Annually sell cookies and nuts door-to-door and in booths.
-                
-              </p>
-            </div>
-          </div>
-
-           
-          
-          <p></p><p></p>
-          <div class="card">
-            <div class="card-body">
-              <h3 class="card-title"><span style="color: #95009a;">WEB Leader</span></h3>
-              <h6><span style="color: #676767;">October 2023</span></h6>
-              <p class="card-text"> WEB - or Where Everybody Belongs - is a immersion program where eigth grade students are selected to help incoming students get used to the school. I provide mentorship to new sixth grade students through monthly meetings and activities.
-              </p>
-            </div>
-          </div> 
-      </section>
-      <p></p><p></p>
-
-    
-   <!-- <section id="skills">
-  <h2>Skills</h2>
-  <div class="d-flex flex-wrap">
-     <h3><span class="badge badge-primary mr-2 mb-2">Python</span></h3>
-     <h3><span class="badge badge-success mr-2 mb-2">C</span></h3>
-     <h3><span class="badge badge-danger mr-2 mb-2">JavaScript</span></h3>
-     <h3><span class="badge badge-warning mr-2 mb-2">Java</span></h3>
-      <h3><span class="badge badge-secondary mr-2 mb-2">HTML5</span></h3>
-     <h3><span class="badge badge-info mr-2 mb-2">CSS3</span></h3>
-     <h3><span class="badge badge-light mr-2 mb-2">React Native</span></h3>
-     <h3><span class="badge badge-dark mr-2 mb-2">Numpy</span></h3>
-     <h3><span class="badge badge-primary mr-2 mb-2">Pandas</span></h3>
-     <h3><span class="badge badge-success mr-2 mb-2">Pytorch</span></h3>
-     <h3><span class="badge badge-danger mr-2 mb-2">MongoDB</span></h3>
-     <h3><span class="badge badge-warning mr-2 mb-2">Docker</span></h3>
-      <h3><span class="badge badge-secondary mr-2 mb-2">Golang</span></h3>
-     <h3><span class="badge badge-info mr-2 mb-2">SQL</span></h3>
-     <h3><span class="badge badge-light mr-2 mb-2">SQLite</span></h3>
-     <h3><span class="badge badge-dark mr-2 mb-2">NoSQL</span></h3>
-     <h3><span class="badge badge-primary mr-2 mb-2">Node</span></h3>
-     <h3><span class="badge badge-success mr-2 mb-2">AWS</span></h3>
-     <h3><span class="badge badge-danger mr-2 mb-2">Jenkins</span></h3>
-     <h3><span class="badge badge-warning mr-2 mb-2">Grafana</span></h3>
-  </div>
-</section>
-<section id="Projects">
-  <p></p><p></p><p></p><p></p>
-<h2>Fun Projects!</h2>
-<button class="btn btn-success" onclick="smiski()">Online Smiskis</button>
-</p>
-</section>
-<section id="Hobbies"></section> -->
-
-
-      <section> <p></p></section>
-    <section> <p><b>© Netra Khot, 2024</b></p></section>
-  
-    </div>
-  
-    <script>     
-
-      function openLink(icon, link, id) {
-          var button = document.getElementById(id);
-      
-          button.innerHTML = '🔗';
-          if (!link.includes('://')) {
-              link = 'http://' + link;
-          }
-          window.open(link, '_blank');
-      
-          setTimeout(function() {
-              button.innerHTML = icon;
-          }, 1000);
-      }
-    //   function downloadResume() {
-    //     var button = document.getElementById("downloadResumeButton");
-      
-    //     button.innerHTML = '🔗';
-    //     icon = '<img src=\'images/resume.png\' alt=\'Resume Icon\' width=\'20\' height=\'20\'>';
-    //     var resumePath = 'TANVI_KHOT_RESUME_website.pdf';
-
-    //     window.open(resumePath, '_blank');
-
-    //     setTimeout(function() {
-    //           button.innerHTML = icon;
-    //       }, 1000);
-    //   }
-    //   function smiski(){
-    //     window.location.href = 'http://www.tanvikhot.com/smiski';
-    //   }
-      </script>
-
-    <script src="script.js"></script>
-    <!-- Bootstrap JS and Popper.js scripts -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  
+  <h1>netrakhot.com</h1>
 </body>
 </html>
