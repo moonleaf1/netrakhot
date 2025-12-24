@@ -1,12 +1,15 @@
 :root {
-  --cream: #f8f3ea;
-  --peach: #f6cba0;
-  --sky: #9bc4ff;
-  --deep: #1f1b2d;
-  --ink: #1a1a1a;
-  --slate: #4c4c5a;
+  --bg: #eef4ff;
+  --panel: #f7f9ff;
+  --accent: #3d5afe;
+  --accent-strong: #1a2b6b;
+  --accent-soft: #b1c6ff;
+  --signal: #2dd4bf;
+  --ink: #101426;
+  --slate: #3f4c6b;
   --white: #ffffff;
-  --shadow: 0 20px 50px rgba(26, 26, 26, 0.15);
+  --shadow: 0 18px 40px rgba(16, 20, 38, 0.12);
+  --line: rgba(16, 20, 38, 0.12);
 }
 
 * {
@@ -17,9 +20,17 @@
 
 body {
   font-family: "Quicksand", "Trebuchet MS", sans-serif;
-  background: radial-gradient(circle at top left, rgba(122, 174, 255, 0.45), transparent 55%),
-    linear-gradient(180deg, #eef6ff 0%, #deeaff 45%, #f8fbff 100%);
-  color: var(--deep);
+  background-color: var(--bg);
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140' viewBox='0 0 140 140' fill='none' stroke='%23101426' stroke-opacity='0.08' stroke-width='2'%3E%3Cpath d='M12 28h52v36h36'/%3E%3Cpath d='M28 96h36v24'/%3E%3Ccircle cx='64' cy='64' r='6'/%3E%3Ccircle cx='100' cy='64' r='6'/%3E%3Ccircle cx='64' cy='120' r='6'/%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160' fill='none' stroke='%23101426' stroke-opacity='0.07' stroke-width='2'%3E%3Ccircle cx='80' cy='80' r='30'/%3E%3Cpath d='M60 80c12-10 28-10 40 0'/%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180' viewBox='0 0 180 180' fill='none' stroke='%23101426' stroke-opacity='0.07' stroke-width='2'%3E%3Ccircle cx='70' cy='86' r='18'/%3E%3Ccircle cx='110' cy='86' r='18'/%3E%3Crect x='86' y='36' width='8' height='80'/%3E%3Cpath d='M90 30v-12'/%3E%3C/svg%3E"),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='150' height='150' viewBox='0 0 150 150' fill='none' stroke='%23101426' stroke-opacity='0.08' stroke-width='2'%3E%3Cpath d='M24 40h20v20H24z'/%3E%3Cpath d='M70 36h16v28'/%3E%3Cpath d='M98 66h28'/%3E%3Cpath d='M92 96c8 12 20 12 28 0'/%3E%3C/svg%3E"),
+    linear-gradient(0deg, transparent 24%, rgba(16, 20, 38, 0.04) 25%, rgba(16, 20, 38, 0.04) 26%, transparent 27%, transparent 74%, rgba(16, 20, 38, 0.04) 75%, rgba(16, 20, 38, 0.04) 76%, transparent 77%, transparent),
+    linear-gradient(90deg, transparent 24%, rgba(16, 20, 38, 0.04) 25%, rgba(16, 20, 38, 0.04) 26%, transparent 27%, transparent 74%, rgba(16, 20, 38, 0.04) 75%, rgba(16, 20, 38, 0.04) 76%, transparent 77%, transparent);
+  background-size: 160px 160px, 200px 200px, 220px 220px, 180px 180px, 48px 48px, 48px 48px;
+  background-position: 10px 20px, 80px 40px, 30px 120px, 120px 100px, 0 0, 0 0;
+  color: var(--ink);
   min-height: 100vh;
 }
 
@@ -29,7 +40,7 @@ body::after {
   position: fixed;
   width: 420px;
   height: 420px;
-  border-radius: 50%;
+  border-radius: 24%;
   z-index: -1;
   filter: blur(0px);
   opacity: 0.3;
@@ -38,13 +49,13 @@ body::after {
 body::before {
   top: -160px;
   right: -160px;
-  background: radial-gradient(circle, rgba(122, 174, 255, 0.7), transparent 65%);
+  background: radial-gradient(circle, rgba(61, 90, 254, 0.5), transparent 65%);
 }
 
 body::after {
   bottom: -200px;
   left: -160px;
-  background: radial-gradient(circle, rgba(112, 204, 255, 0.7), transparent 70%);
+  background: radial-gradient(circle, rgba(45, 212, 191, 0.5), transparent 70%);
 }
 
 .page {
@@ -54,18 +65,38 @@ body::after {
 }
 
 .top-nav {
+  margin-bottom: 40px;
+  padding: 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(238, 244, 255, 0.92);
+  backdrop-filter: blur(8px);
+  border-bottom: 2px solid var(--line);
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+}
+
+.top-nav-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 40px;
-  padding: 12px 0;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 14px 24px;
 }
 
 .logo {
   font-family: "Quicksand", "Trebuchet MS", sans-serif;
-  font-size: 30px;
-  font-weight: 600;
+  font-size: 32px;
+  font-weight: 700;
   letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+.logo a {
+  color: var(--ink);
+  text-decoration: none;
 }
 
 .nav-links {
@@ -82,7 +113,7 @@ body::after {
 }
 
 .nav-links a:hover {
-  color: var(--deep);
+  color: var(--ink);
 }
 
 .hero {
@@ -95,15 +126,17 @@ body::after {
 
 .hero-content h1 {
   font-family: "Quicksand", "Trebuchet MS", sans-serif;
-  font-size: clamp(2.5rem, 4vw, 3.4rem);
-  margin: 16px 0 12px;
-  color: var(--deep);
+  font-size: clamp(2.6rem, 4.5vw, 3.8rem);
+  margin: 16px 0 16px;
+  color: var(--ink);
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .eyebrow {
   text-transform: uppercase;
-  letter-spacing: 2px;
-  font-size: 12px;
+  letter-spacing: 3px;
+  font-size: 11px;
   color: var(--slate);
 }
 
@@ -124,8 +157,8 @@ body::after {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: 999px;
-  padding: 12px 22px;
+  border-radius: 12px;
+  padding: 12px 24px;
   text-decoration: none;
   font-weight: 600;
   border: 1px solid transparent;
@@ -133,15 +166,16 @@ body::after {
 }
 
 .button.primary {
-  background: var(--deep);
+  background: var(--accent);
   color: var(--white);
   box-shadow: var(--shadow);
+  border: 2px solid var(--accent-strong);
 }
 
 .button.ghost {
-  border-color: rgba(31, 27, 45, 0.2);
-  color: var(--deep);
-  background: rgba(255, 255, 255, 0.6);
+  border-color: var(--line);
+  color: var(--ink);
+  background: var(--panel);
 }
 
 .button:hover {
@@ -149,17 +183,20 @@ body::after {
 }
 
 .hero-card {
-  background: var(--white);
-  border-radius: 28px;
+  background: var(--panel);
+  border-radius: 20px;
   padding: 24px;
   box-shadow: var(--shadow);
-  border: 1px solid rgba(31, 27, 45, 0.08);
+  border: 2px solid var(--line);
 }
 
 .hero-card-title {
   font-weight: 600;
   margin-bottom: 16px;
   color: var(--slate);
+  text-transform: uppercase;
+  letter-spacing: 1.6px;
+  font-size: 12px;
 }
 
 .hero-card-grid {
@@ -169,9 +206,9 @@ body::after {
 }
 
 .label {
-  font-size: 12px;
+  font-size: 11px;
   text-transform: uppercase;
-  letter-spacing: 1.2px;
+  letter-spacing: 1.8px;
   color: var(--slate);
   margin-bottom: 6px;
 }
@@ -194,7 +231,9 @@ body::after {
 
 .section-header h2 {
   font-family: "Quicksand", "Trebuchet MS", sans-serif;
-  font-size: clamp(2rem, 3vw, 2.6rem);
+  font-size: clamp(2rem, 3.2vw, 2.7rem);
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .section-body {
@@ -215,24 +254,24 @@ body::after {
 }
 
 .media-card {
-  background: var(--white);
-  border-radius: 24px;
+  background: var(--panel);
+  border-radius: 20px;
   padding: 18px;
   display: grid;
   grid-template-columns: 120px minmax(0, 1fr);
   gap: 18px;
   align-items: center;
   box-shadow: var(--shadow);
-  border: 1px solid rgba(31, 27, 45, 0.08);
+  border: 2px solid var(--line);
 }
 
 .media-card img {
   width: 120px;
   height: 120px;
-  border-radius: 18px;
+  border-radius: 12px;
   object-fit: cover;
-  border: 1px solid rgba(31, 27, 45, 0.1);
-  background: #fdf9f3;
+  border: 2px solid var(--line);
+  background: #eff4ff;
 }
 
 .media-card h3 {
@@ -254,11 +293,13 @@ body::after {
 
 .tag {
   padding: 6px 12px;
-  border-radius: 999px;
-  background: rgba(31, 27, 45, 0.08);
-  font-size: 12px;
+  border-radius: 10px;
+  background: rgba(61, 90, 254, 0.12);
+  font-size: 11px;
   font-weight: 600;
-  color: var(--deep);
+  color: var(--accent-strong);
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
 }
 
 .experience-grid {
@@ -268,24 +309,24 @@ body::after {
 }
 
 .experience-card {
-  background: var(--white);
-  border-radius: 24px;
+  background: var(--panel);
+  border-radius: 20px;
   padding: 20px;
   display: grid;
   grid-template-columns: 92px minmax(0, 1fr);
   gap: 16px;
   align-items: center;
   box-shadow: var(--shadow);
-  border: 1px solid rgba(31, 27, 45, 0.08);
+  border: 2px solid var(--line);
 }
 
 .experience-card img {
   width: 92px;
   height: 92px;
-  border-radius: 20px;
+  border-radius: 14px;
   object-fit: cover;
-  background: #fdf9f3;
-  border: 1px solid rgba(31, 27, 45, 0.1);
+  background: #eff4ff;
+  border: 2px solid var(--line);
 }
 
 .experience-card h3 {
@@ -304,13 +345,14 @@ body::after {
 }
 
 .contact-card {
-  background: var(--deep);
+  background: var(--accent-strong);
   color: var(--white);
   padding: 36px;
-  border-radius: 28px;
+  border-radius: 22px;
   max-width: 760px;
   text-align: center;
   box-shadow: var(--shadow);
+  border: 2px solid rgba(255, 255, 255, 0.2);
 }
 
 .contact-card p {
@@ -319,11 +361,11 @@ body::after {
 }
 
 .blog-hero {
-  background: var(--white);
-  border-radius: 28px;
+  background: var(--panel);
+  border-radius: 20px;
   padding: 32px;
   box-shadow: var(--shadow);
-  border: 1px solid rgba(31, 27, 45, 0.08);
+  border: 2px solid var(--line);
   margin-bottom: 48px;
 }
 
@@ -333,30 +375,31 @@ body::after {
 }
 
 .blog-card {
-  background: var(--white);
+  background: var(--panel);
   border-radius: 20px;
   padding: 22px;
-  border: 1px solid rgba(31, 27, 45, 0.08);
+  border: 2px solid var(--line);
   box-shadow: var(--shadow);
 }
 
 .blog-date {
   font-size: 13px;
   text-transform: uppercase;
-  letter-spacing: 1.6px;
+  letter-spacing: 2px;
   color: var(--slate);
   margin-bottom: 8px;
 }
 
 .blog-card pre {
-  background: #131118;
-  color: #f5f2ff;
-  border-radius: 14px;
+  background: #111a33;
+  color: #e6efff;
+  border-radius: 12px;
   padding: 14px 16px;
   font-size: 14px;
   line-height: 1.6;
   overflow-x: auto;
   margin-top: 12px;
+  border: 2px solid rgba(255, 255, 255, 0.08);
 }
 
 .blog-card code {
@@ -366,9 +409,9 @@ body::after {
 .blog-image {
   width: 250px;
   height: auto;
-  border-radius: 18px;
+  border-radius: 12px;
   margin: 14px auto;
-  border: 1px solid rgba(31, 27, 45, 0.12);
+  border: 2px solid var(--line);
   box-shadow: var(--shadow);
   display: block;
 }
@@ -403,7 +446,7 @@ body::after {
 }
 
 @media (max-width: 640px) {
-  .top-nav {
+  .top-nav-inner {
     flex-direction: column;
     align-items: flex-start;
     gap: 12px;
