@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="220" height="140" viewBox="0 0 220 140">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#c9f3c2" />
+      <stop offset="100%" stop-color="#7cd38b" />
+    </linearGradient>
+  </defs>
+  <rect width="220" height="140" rx="22" fill="url(#g)" />
+  <rect x="28" y="36" width="76" height="68" rx="16" fill="#e7fae5" />
+  <rect x="42" y="54" width="48" height="32" rx="10" fill="#7cd38b" />
+  <path d="M136 52l14-10 14 10" fill="none" stroke="#2a6b3c" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M150 42v30" fill="none" stroke="#2a6b3c" stroke-width="6" stroke-linecap="round" />
+  <path d="M150 74l-12 8 12 8" fill="none" stroke="#2a6b3c" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
+  <text x="30" y="124" font-size="14" font-family="Space Grotesk, Arial, sans-serif" fill="#1e4c2d">Smart Recycling Bin</text>
+</svg>

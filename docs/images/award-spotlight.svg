@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="220" height="140" viewBox="0 0 220 140">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#fde1f5" />
+      <stop offset="100%" stop-color="#f4a2d6" />
+    </linearGradient>
+  </defs>
+  <rect width="220" height="140" rx="22" fill="url(#g)" />
+  <rect x="30" y="40" width="72" height="60" rx="16" fill="#fff0fb" />
+  <path d="M46 86l20-32 20 32" fill="none" stroke="#f4a2d6" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
+  <circle cx="66" cy="60" r="8" fill="#f4a2d6" />
+  <rect x="120" y="46" width="70" height="48" rx="12" fill="#fff0fb" />
+  <text x="34" y="124" font-size="14" font-family="Space Grotesk, Arial, sans-serif" fill="#6a1f4b">Student Spotlight</text>
+</svg>

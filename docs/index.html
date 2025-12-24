@@ -1,34 +1,227 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>netrakhot.com</title>
-
-<!-- Import Quicksand font with extra-bold weight -->
-<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap" rel="stylesheet">
-
-<style>
-body {
-  display: flex;
-  justify-content: center;   /* center horizontally */
-  align-items: center;       /* center vertically */
-  height: 100vh;             /* full viewport height */
-  margin: 0;
-  font-family: 'Quicksand', sans-serif;
-  background-color: #f8f8f8;
-}
-
-h1 {
-  font-size: 4rem;        /* large text */
-  font-weight: 700;       /* very bold */
-  color: #222;            /* strong dark gray */
-  letter-spacing: 0.03em; /* slight spacing for balance */
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Netra Khot personal website with projects, awards, and experiences.">
+  <title>Netra Khot</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%23000000'/%3E%3Ctext x='2' y='12' font-size='12' fill='%23ffffff'%3ENK%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
-
 <body>
-  <h1>netrakhot.com</h1>
+  <div class="page">
+    <nav class="top-nav">
+      <div class="logo">Netra Khot</div>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#awards">Awards</a>
+        <a href="#experience">Experience</a>
+        <a href="blog.html">Blog</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+
+    <header class="hero" id="top">
+      <div class="hero-content">
+        <p class="eyebrow">10th grade student</p>
+        <h1>Exploring science, math, arts, and sports with curiosity and heart.</h1>
+        <p class="subtitle">I love turning ideas into projects that help the environment and the people around me. Tennis keeps me focused, and research keeps me curious.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="https://mail.google.com/mail/?view=cm&fs=1&to=netraqua@gmail.com" target="_blank" rel="noreferrer">Email me</a>
+          <a class="button ghost" href="#projects">See my projects</a>
+        </div>
+      </div>
+      <div class="hero-card reveal" style="--delay: 0.1s;">
+        <p class="hero-card-title">Quick facts</p>
+        <div class="hero-card-grid">
+          <div>
+            <p class="label">Focus</p>
+            <p>Environmental tech</p>
+          </div>
+          <div>
+            <p class="label">Sports</p>
+            <p>Tennis, UTR 3.35</p>
+          </div>
+          <div>
+            <p class="label">Music</p>
+            <p>Violin, 2nd chair</p>
+          </div>
+          <div>
+            <p class="label">Community</p>
+            <p>Girl Scouts Cadette</p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section id="about" class="section">
+      <div class="section-header">
+        <p class="section-kicker">About</p>
+        <h2>Small experiments, real-world impact.</h2>
+      </div>
+      <p class="section-body">I am a 10th grade student motivated by the environment and how technology can improve it. I have participated in science fairs, building projects focused on recycling, animals, and ocean health. I enjoy tennis and have been playing for three years. I also work with Python, PyTorch, Pandas, and other tools to build ideas into prototypes.</p>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="section-header">
+        <p class="section-kicker">Projects</p>
+        <h2>Projects I am building right now.</h2>
+      </div>
+      <div class="grid-2 projects-grid">
+        <article class="media-card reveal" style="--delay: 0.1s;">
+          <img src="images/project-dog-feeder.svg" alt="Illustration of an automatic dog feeder project">
+          <div>
+            <h3>Automatic dog feeder</h3>
+            <p class="muted">July 2022</p>
+            <p>Functioning feeder to support service dog owners with Alzheimer's.</p>
+            <div class="tags">
+              <span class="tag">Assistive tech</span>
+              <span class="tag">Hardware</span>
+            </div>
+          </div>
+        </article>
+        <article class="media-card reveal" style="--delay: 0.2s;">
+          <img src="images/project-recycling-robot.svg" alt="Illustration of an AI recycling robot project">
+          <div>
+            <h3>AI recycling robot</h3>
+            <p class="muted">March 2023</p>
+            <p>Robot to recognize and collect aluminum cans to prevent beach pollution.</p>
+            <div class="tags">
+              <span class="tag">Computer vision</span>
+              <span class="tag">Robotics</span>
+            </div>
+          </div>
+        </article>
+        <article class="media-card reveal" style="--delay: 0.3s;">
+          <img src="images/project-smart-recycling.svg" alt="Illustration of a smart recycling bin project">
+          <div>
+            <h3>Smart recycling bin</h3>
+            <p class="muted">July 2023</p>
+            <p>Smart bin to sort different bottle types and reduce contamination.</p>
+            <div class="tags">
+              <span class="tag">Sensing</span>
+              <span class="tag">Sustainability</span>
+            </div>
+          </div>
+        </article>
+        <article class="media-card reveal" style="--delay: 0.4s;">
+          <img src="images/project-coral-bleaching.svg" alt="Illustration of coral bleaching detection project">
+          <div>
+            <h3>Coral bleaching detection</h3>
+            <p class="muted">March 2024</p>
+            <p>Neural network to detect coral bleaching and protect aquatic life.</p>
+            <div class="tags">
+              <span class="tag">Neural networks</span>
+              <span class="tag">Ocean health</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="awards" class="section">
+      <div class="section-header">
+        <p class="section-kicker">Awards</p>
+        <h2>Recognition for science fairs and leadership.</h2>
+      </div>
+      <div class="grid-2">
+        <article class="media-card reveal" style="--delay: 0.1s;">
+          <img src="images/award-synopsys-7.svg" alt="Illustration of Synopsys Science Fair award">
+          <div>
+            <h3>Synopsys Science Fair Winner</h3>
+            <p>Second place for the AI recycling robot that identifies aluminum cans.</p>
+          </div>
+        </article>
+        <article class="media-card reveal" style="--delay: 0.2s;">
+          <img src="images/award-synopsys-8.svg" alt="Illustration of Synopsys Science Fair award">
+          <div>
+            <h3>Synopsys Science Fair Winner</h3>
+            <p>Recognition for the coral bleaching detection neural network.</p>
+          </div>
+        </article>
+        <article class="media-card reveal" style="--delay: 0.3s;">
+          <img src="images/award-csef.svg" alt="Illustration of CSEF honorable mention award">
+          <div>
+            <h3>Honorable Mention - CSEF statewide fair</h3>
+            <p>Honorable mention for the AI recycling robot.</p>
+          </div>
+        </article>
+        <article class="media-card reveal" style="--delay: 0.4s;">
+          <img src="images/award-s4-third.svg" alt="Illustration of S4 third place award">
+          <div>
+            <h3>S4 third place winner</h3>
+            <p>Automatic dog feeder project for service dog owners.</p>
+          </div>
+        </article>
+        <article class="media-card reveal" style="--delay: 0.5s;">
+          <img src="images/award-s4-first.svg" alt="Illustration of S4 first place award">
+          <div>
+            <h3>S4 first place winner</h3>
+            <p>Smart recycling bin to sort bottle types and reduce contamination.</p>
+          </div>
+        </article>
+        <article class="media-card reveal" style="--delay: 0.6s;">
+          <img src="images/award-spotlight.svg" alt="Illustration of student spotlight award">
+          <div>
+            <h3>Student spotlight award</h3>
+            <p>Recognized for academic excellence in October 2023.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="experience" class="section">
+      <div class="section-header">
+        <p class="section-kicker">Experience</p>
+        <h2>Teams, leadership, and creative outlets.</h2>
+      </div>
+      <div class="experience-grid">
+        <article class="experience-card reveal" style="--delay: 0.1s;">
+          <img src="images/exp-tennis.svg" alt="Illustration of tennis experience">
+          <div>
+            <h3>Tennis</h3>
+            <p class="muted">August 2021 - present</p>
+            <p>UTR 3.35, WTN 24.5. Captain of Lawson Junior Varsity tennis team, played singles #1 and won the division championship.</p>
+          </div>
+        </article>
+        <article class="experience-card reveal" style="--delay: 0.2s;">
+          <img src="images/exp-violin.svg" alt="Illustration of violin experience">
+          <div>
+            <h3>Violin player - School Orchestra</h3>
+            <p class="muted">August 2021 - present</p>
+            <p>Promoted early to advanced level, 2nd chair with three years of orchestra experience.</p>
+          </div>
+        </article>
+        <article class="experience-card reveal" style="--delay: 0.3s;">
+          <img src="images/exp-girl-scouts.svg" alt="Illustration of Girl Scouts experience">
+          <div>
+            <h3>Girl Scouts</h3>
+            <p class="muted">August 2018 - present</p>
+            <p>Cadette working on a Silver Award Project with guidance from the Cupertino Mayor. Annual cookie and nut sales in booths and door-to-door.</p>
+          </div>
+        </article>
+        <article class="experience-card reveal" style="--delay: 0.4s;">
+          <img src="images/exp-web-leader.svg" alt="Illustration of WEB Leader experience">
+          <div>
+            <h3>WEB Leader</h3>
+            <p class="muted">October 2023</p>
+            <p>Mentor for incoming students through monthly meetings and activities in the WEB program.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact">
+      <div class="contact-card reveal" style="--delay: 0.1s;">
+        <h2>Let's connect.</h2>
+        <p>If you want to collaborate, share feedback, or learn more about my projects, send me a message.</p>
+        <a class="button primary" href="https://mail.google.com/mail/?view=cm&fs=1&to=netraqua@gmail.com" target="_blank" rel="noreferrer">Email me</a>
+      </div>
+    </section>
+  </div>
 </body>
 </html>
